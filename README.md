@@ -1,6 +1,6 @@
 ## Overview
 
-A simple Todo app built with React!
+A simple listing of Users which can be added, edited and deleted. Built with NodeJs and MongoDB!
 
 ## Live At
 
