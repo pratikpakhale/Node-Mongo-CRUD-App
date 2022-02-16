@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node main.js"
   },
   "author": "Pratik Pakhale",
   "license": "ISC",
