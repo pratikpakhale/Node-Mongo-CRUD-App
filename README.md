@@ -9,3 +9,7 @@ The project is live at - https://node-mongo-users-database.netlify.app/ [Not Wor
 ## Tutorial Link
 
 The YouTube Playlist referred in making of this project - https://www.youtube.com/playlist?list=PL6u82dzQtlfvJoAWdyf5mUxPQRnNKCMGt
+
+## Serverless Code
+
+Change the branch of this repository to 'serverless' and you'll find the code for Serverless Deployment @ Netlify
