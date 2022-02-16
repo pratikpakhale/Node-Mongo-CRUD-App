@@ -2,9 +2,9 @@
 
 A simple Todo app built with React!
 
-## Live At [Not Working, Due to a package misfunctionality]
+## Live At
 
-The project is live at - https://node-mongo-users-database.netlify.app/ [Doesn't work]
+The project is live at - https://node-mongo-users-database.netlify.app/ [Not Working, Due to a package misfunctionality]
 
 ## Tutorial Link
 
