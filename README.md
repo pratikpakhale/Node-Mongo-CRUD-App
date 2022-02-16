@@ -4,7 +4,7 @@ A simple listing of Users which can be added, edited and deleted. Built with Nod
 
 ## Live At
 
-The project is live at - https://node-mongo-users-database.netlify.app/ [Not Working, Due to a package misfunctionality]
+The project is live at - https://node-mongo-users-database.netlify.app/ [Not Working, Because ejs is not supported by serverless lambda functions. Everything works perfectly on the local server.]
 
 ## Tutorial Link
 
