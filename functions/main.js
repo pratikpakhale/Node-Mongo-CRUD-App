@@ -4,6 +4,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const session = require('express-session')
 
+const serverless = require('serverless-http')
+const path = require('path')
+
 //init express app
 const app = express()
 const PORT = process.env.PORT || 4000
@@ -41,15 +44,15 @@ app.use((req, res, next) => {
   next()
 })
 
-app.use(express.static('uploads'))
+const uploads_path = path.join('..', 'uploads')
+console.log(uploads_path)
+app.use(express.static(uploads_path))
 
 //set template engine
 app.set('view engine', 'ejs')
 
 //attach router
-const routes = require('./routes/routes')
+const routes = require('../routes/routes')
 app.use('', routes)
 
-app.listen(PORT, () => {
-  console.log(`Server is now live on http://localhost:${PORT}`)
-})
+module.exports.handler = serverless(app)
