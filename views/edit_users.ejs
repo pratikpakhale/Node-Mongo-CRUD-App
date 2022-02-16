@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+
+    <!-- importing links -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- importing scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+      integrity="sha512-pax4MlgXjHEPfCwcJLQhigY7+N8rt6bVvWLFyUMuxShv170X53TRzGPmPkZmGBhk+jikR8WBM4yl7A9WMHHqvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- actual code start from here -->
+
+    <!-- header  -->
+    <%- include('layout/header') %>
+
+    <!-- main container  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto mt-4">
+          <div class="card shadow">
+            <div class="card-header bg-primary">
+              <h3 class="text-light">Edit User (<%= user.name %> )</h3>
+            </div>
+            <div class="card-body p-4">
+              <form
+                action="/update/<%= user._id %> "
+                method="POST"
+                id="add-form"
+                enctype="multipart/form-data"
+              >
+                <div class="mb-3">
+                  <label for="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    class="form-control form-control-lg"
+                    placeholder="Enter name"
+                    value="<%= user.name  %> "
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control form-control-lg"
+                    placeholder="Enter email"
+                    value="<%= user.email %> "
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    class="form-control form-control-lg"
+                    placeholder="Enter Number"
+                    value="<%= user.phone %> "
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label">Select Image</label>
+                  <input
+                    type="file"
+                    name="image"
+                    class="form-control form-control-lg"
+                    placeholder="Enter name"
+                  />
+                  <img
+                    src="../<%= user.image %>"
+                    width="50"
+                    class="img-thumbnail mt-1"
+                    alt="pfp"
+                  />
+                </div>
+                <input
+                  type="hidden"
+                  name="old_image"
+                  value="<%= user.image %>"
+                />
+                <div class="mb-3 d-grid">
+                  <input
+                    type="submit"
+                    value="Update User"
+                    name="submit"
+                    class="btn btn-success btn-lg"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
